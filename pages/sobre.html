@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/audio_button.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/favicon/favicon-16x16.png"
+        />
+        <script defer src="../assets/js/audio.js"></script>
+        <script defer src="../assets/js/menu_mobile.js"></script>
+        <title>Cristiano Ronaldo - Carreira e Vida Pessoal</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <audio id="theme_audio">
+                    <source src="../assets/audio/cr7.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <button id="audio-toggle" onclick="toggleAudio()">
+                    <i id="audio-icon" class="fas fa-volume-up"></i>
+                </button>
+                <nav class="nav-bar">
+                    <ul>
+                        <div class="container-menu" onclick="change(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <li><a href="../index.html">carreira</a></li>
+                        <li>
+                            <a href="./vida_pessoal.html">vida pessoal</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./sobre.html">sobre</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="carreira" class="container">
+            <div class="club">
+                <img id="sobre" src="../assets/img/yago_foto.jpg" alt="" />
+                <div>
+                    <h2>Sobre Mim</h2>
+                    <p>
+                        Meu nome é Yago Pessoa e sou apaixonado por tecnologia e
+                        entretenimento. Atualmente, estou cursando Sistemas para
+                        Internet, onde busco me aprofundar ainda mais na área.
+                        Trabalho na UNIESP como Agente de Vendas e Serviços, o
+                        que me permite desenvolver habilidades valiosas.
+                    </p>
+                    <p>
+                        Nos meus momentos de lazer, gosto de passar tempo com
+                        minha família e namorada, além de aproveitar os finais
+                        de semana na praia sempre que possível. Também sou fã de
+                        videogames, especialmente de jogar Counter-Strike 2. À
+                        noite, costumo sair com amigos para beber e relaxar.
+                    </p>
+                    <p>
+                        Sou um amante de filmes e séries, com "The Last Samurai"
+                        como um dos meus favoritos, e não perco a oportunidade
+                        de assistir "Breaking Bad". Acredito que esses momentos
+                        de descontração são essenciais para equilibrar minha
+                        vida pessoal e profissional.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2024 Cristiano Ronaldo. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
