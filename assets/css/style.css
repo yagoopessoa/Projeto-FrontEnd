@@ -1,7 +1,7 @@
 :root {
     --main-padding: 10px;
     --main-margin: 20px;
-    --main-width: 1600px;
+    --main-width: 100vw;
     --main-color: #000;
     --second-color: #fff;
     --cards-bgc: #000;
@@ -13,13 +13,18 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     color: #fff;
     text-align: center;
     font-family: helvetica;
     position: relative;
     background-color: var(--main-color);
-    background-image: url('../img/texturas-de-grama-verde-bg.jpg');
+    background-image: url("../img/texturas-de-grama-verde-bg.jpg");
 }
 
 header {
@@ -35,7 +40,7 @@ header {
 
 header div.container {
     position: relative;
-    height: 400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +53,7 @@ header div.container {
 }
 
 .nav-bar > ul {
-    max-width: var(--main-width);
+    width: 100%;
     min-height: 40px;
     display: flex;
     justify-content: center;
@@ -58,6 +63,9 @@ header div.container {
         var(--main-color) 90%,
         transparent 10%
     );
+    position: absolute;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
 }
 
 .nav-bar ul li {
@@ -82,8 +90,9 @@ ul li a.active {
 
 main {
     display: flex;
-    padding: 30px 4vw;
+    padding: 70px 1vw 30px 1vw;
     min-height: calc(100vh - 438px);
+    justify-content: center;
 }
 
 main p {
@@ -100,7 +109,6 @@ h3 {
 
 .container {
     max-width: var(--main-width);
-    margin: 0 auto;
 }
 
 section {
@@ -110,6 +118,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px 0;
+    max-width: 1400px;
 }
 
 .responsive {
@@ -135,8 +144,12 @@ section img {
     padding: calc(var(--main-padding) * 3);
 }
 
-section .club img,
 #sobre {
+    max-width: 1400px;
+}
+
+section .club img,
+#sobre-img {
     max-width: 200px;
     border: 3px solid #fff;
 }
@@ -160,73 +173,4 @@ footer {
     );
     color: white;
     bottom: 0;
-}
-
-@media (min-width: 601px) {
-
-    .club:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-
-    nav ul li a {
-        display: inline-block !important;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        max-height: 100vw;
-    }
-    header .container {
-        max-height: 100vw !important;
-    }
-    section {
-        flex-direction: column;
-    }
-    .club {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li a {
-        display: none;
-    }
-
-    .nav-bar ul li a:hover {
-        border: none;
-        border-radius: 0px;
-        color: #fff;
-        background-color: #777;
-        width: 100vw;
-    }
-
-    .container-menu {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .bar1,
-    .bar2,
-    .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #999;
-        margin: 6px 0;
-        transition: 0.4s;
-    }
-
-    .change .bar1 {
-        transform: translate(0, 11px) rotate(-45deg);
-    }
-
-    .change .bar2 {
-        opacity: 0;
-    }
-
-    .change .bar3 {
-        transform: translate(0, -11px) rotate(45deg);
-    }
 }
